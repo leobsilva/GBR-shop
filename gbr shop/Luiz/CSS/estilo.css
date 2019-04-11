@@ -1,27 +1,33 @@
-/*#Busca{
-	background-color: black;
-	border: solid 1px;
-	border-radius: 15px;
+#lista-categorias{
 	width: 300px;
-}
-
-#txtBusca{
+	height: 500px;
+	background-color: white;
+	border: 3px solid black;
+	font-size: 30px;
+	margin-right: 10px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
 	float: left;
-	background-color: transparent;
-	padding-left: 5px;
-	font-style: italic;
-	font-size: 18px;
-	border: none;
-	height: 32px;
-	width: 260px;
 }
 
-/*#ImgBusca{
-	float: right;
+.editaItensCategoria{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	list-style-type: none;
 }
 
-#container{
-	width: 720px;
-	height: 1280px;
-	background-color: gray;
-}*/
+.Links-categorias {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #ae841a;
+}
+
+.img-categorias{
+	width: 20px;
+	height: 20px;
+}
