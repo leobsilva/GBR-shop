@@ -101,6 +101,7 @@ hr{
 	float: right;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	position: relative;
 }
 
 #img1left{
@@ -125,6 +126,13 @@ hr{
 }
 
 #img2right{
+	width: 350px;
+	height: 420px;
+	margin: 5px 5px 5px 5px;
+	border: 3px solid #ae841a;
+}
+
+.produtos{
 	width: 350px;
 	height: 420px;
 	margin: 5px 5px 5px 5px;
