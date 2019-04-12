@@ -1,3 +1,21 @@
+body{
+	width: 1000px;
+	text-align: center;
+
+}
+
+a:hover{
+	color: #ae841a;
+}
+
+.propaganda{
+	clear: left;
+	clear: right;
+	clear: both;
+	clear: top;
+}
+
+/*Estilo da Barra Lateral por categorias*/
 #lista-categorias{
 	width: 300px;
 	height: 500px;
@@ -23,11 +41,46 @@
 	text-decoration: none;
 }
 
-a:hover{
-	color: #ae841a;
-}
-
 .img-categorias{
 	width: 20px;
 	height: 20px;
+}
+
+/*Estilo da Caixa de Produtos em destaque*/
+
+#produtos-destaque{
+	height: 600px;
+	width: 600px;
+	border: 3px solid black;
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#img1left{
+	width: 250px;
+	height: 250px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+#img2left{
+	width: 250px;
+	height: 250px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+#img1right{
+	width: 250px;
+	height: 250px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+#img2right{
+	width: 250px;
+	height: 250px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
 }
