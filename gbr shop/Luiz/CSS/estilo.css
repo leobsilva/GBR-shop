@@ -1,11 +1,19 @@
 body{
-	width: 1000px;
-	text-align: center;
+	width: 1280px;
+	position: absolute;
+	left: 15%;
+	right: 15%;
+	background-color: gray;
 
 }
 
 a:hover{
 	color: #ae841a;
+}
+
+hr{
+	background-color: #ae841a;
+
 }
 
 .propaganda{
@@ -17,7 +25,7 @@ a:hover{
 /* Estilo do Cabeçalho*/
 
 #cabecalho{
-	width: 1000px;
+	width: 1280px;
 	height: 100px;
 	border: 3px solid black;
 	margin: 5px 5px 5px 5px;
@@ -36,6 +44,7 @@ a:hover{
 }
 
 #logo-marca{
+	text-align: center;
 	clear: left;
 	clear: right;
 	clear: both;
@@ -44,8 +53,8 @@ a:hover{
 
 /*Estilo da Barra Lateral por categorias*/
 #lista-categorias{
-	width: 300px;
-	height: 500px;
+	width: 350px;
+	height: 600px;
 	background-color: white;
 	border: 3px solid black;
 	font-size: 30px;
@@ -73,11 +82,17 @@ a:hover{
 	height: 20px;
 }
 
+.img-redesocial{
+	height: 20px;
+	width: 20px;
+	float: bottom;
+}
+
 /*Estilo da Caixa de Produtos em destaque*/
 
 #produtos-destaque{
-	height: 600px;
-	width: 600px;
+	height: 900px;
+	width: 800px;
 	border: 3px solid black;
 	float: right;
 	margin-top: 5px;
@@ -85,50 +100,53 @@ a:hover{
 }
 
 #img1left{
-	width: 250px;
-	height: 250px;
-	margin: 10px 10px 10px 10px;
+	width: 350px;
+	height: 420px;
+	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
 }
 
 #img2left{
-	width: 250px;
-	height: 250px;
-	margin: 10px 10px 10px 10px;
+	width: 350px;
+	height: 420px;
+	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
 }
 
 #img1right{
-	width: 250px;
-	height: 250px;
-	margin: 10px 10px 10px 10px;
+	width: 350px;
+	height: 420px;
+	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
 }
 
 #img2right{
-	width: 250px;
-	height: 250px;
-	margin: 10px 10px 10px 10px;
+	width: 350px;
+	height: 420px;
+	margin: 5px 5px 5px 5px;
 	padding: 10px 10px 10px 10px;
 }
 
 /*Estilo caixa de anúncios*/
 
 #anuncios{
-	width: 1000px;
+	width: 1100px;
 	border: 3px solid black;
 	float: left;
+	position: relative;
+	left: 8%;
+	right: 8%;
 }
 
 #img-anuncio{
-	width: 1000px;
+	width: 1100px;
 	margin-top: 30px;
 }
 
 /*Estilo do Rodapé*/
 
 #rodape{
-	width: 1000px;
+	width: 1280px;
 	float: left;
 	border: 3px solid black;
 }
