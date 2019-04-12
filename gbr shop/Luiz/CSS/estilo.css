@@ -14,6 +14,33 @@ a:hover{
 	clear: both;
 	clear: top;
 }
+/* Estilo do Cabeçalho*/
+
+#cabecalho{
+	width: 1000px;
+	height: 100px;
+	border: 3px solid black;
+	margin: 5px 5px 5px 5px;
+}
+
+#Busca{
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#criar-conta{
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+#logo-marca{
+	clear: left;
+	clear: right;
+	clear: both;
+	clear: top; 
+}
 
 /*Estilo da Barra Lateral por categorias*/
 #lista-categorias{
@@ -84,3 +111,25 @@ a:hover{
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
 }
+
+/*Estilo caixa de anúncios*/
+
+#anuncios{
+	width: 1000px;
+	border: 3px solid black;
+	float: left;
+}
+
+#img-anuncio{
+	width: 1000px;
+	margin-top: 30px;
+}
+
+/*Estilo do Rodapé*/
+
+#rodape{
+	width: 1000px;
+	float: left;
+	border: 3px solid black;
+}
+
