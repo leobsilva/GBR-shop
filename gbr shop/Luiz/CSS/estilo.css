@@ -1,8 +1,5 @@
 body{
-	width: 1280px;
-	position: absolute;
-	left: 15%;
-	right: 15%;
+	width: 100%;
 	background-color: white;
 	background-image: url("Imagens/tijolo.jpg");
 
@@ -25,14 +22,92 @@ hr{
 }
 /* Estilo do Cabeçalho*/
 
-#cabecalho{
-	width: 1280px;
-	height: 100px;
-	border: 3px solid black;
-	margin: 5px 5px 5px 5px;
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#Busca{
+nav{
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+  height: 60px;
+}
+
+ul.menu-topo{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 60px;
+}
+ul.menu-topo li{
+  float: right;
+}
+ul.menu-topo li a{
+  color: white;
+  text-decoration: none;
+  width: 130px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  letter-spacing: 0.9px;
+}
+ul.menu-topo li a:hover{
+  color: rgba(255,255,255, .8);
+  transition: .3s;
+}
+
+.form-pesquisa{
+  margin-top: 15px;
+  float: left;
+  margin-right: 100px;
+}
+input[type=text]{
+  border-radius: 15px;
+  margin-left: 30px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+#btn{
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  padding: 5.5px;
+  font-family: sans-serif;
+  border-radius: 20px;
+}
+.cart{
+  margin: 12px;
+  float: left;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  padding: 5.5px;
+  border-radius: 20px;
+}
+
+.banner{
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  clear: right;
+}
+#linha{
+  width: 80%;
+  border-bottom: .5px solid white;
+  clear: right;
+}
+
+#cabecalho{
+	width: 100%
+}
+
+/*#Busca{
 	float: left;
 	margin-left: 5px;
 	margin-top: 5px;
@@ -52,7 +127,7 @@ hr{
 	clear: right;
 	clear: both;
 	clear: top; 
-}
+}*/
 
 /*Estilo da Barra Lateral por categorias*/
 #lista-categorias{

@@ -52,7 +52,9 @@ input[type=text]{
   float: right;
   background-color: white;
   cursor: pointer;
-  position: absolute;
+  position: relative;
+  top: 1.5%;
+  left: 1%;
   padding: 5.5px;
   font-family: sans-serif;
   border-radius: 20px;
