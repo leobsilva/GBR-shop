@@ -57,6 +57,10 @@ input[type=text]{
   padding: 5.5px;
   font-family: sans-serif;
   border-radius: 20px;
+  position: relative;
+  left: 1%;
+  top: 1%;
+
 }
 .cart{
   margin: 12px;
@@ -83,7 +87,7 @@ input[type=text]{
 
 
 #lista-categorias ul li a:hover{
-	color: #ae841a;
+	color: gray;
 }
 
 
@@ -104,16 +108,16 @@ input[type=text]{
 	width: 250px;
 	height: 600px;
 	background-color: white;
-	border: 5px solid black;
 	font-size: 30px;
 	margin-right: 10px;
 	margin-left: 15px;
 	margin-bottom: 5px;
 	margin-top: 5px;
 	padding: 15px;
-	float: left;
-	border-radius: 30px;
+  float: left;
+
 }
+
 
 .editaItensCategoria{
 	padding-bottom: 10px;
@@ -126,15 +130,27 @@ input[type=text]{
 	text-decoration: none;
 }
 
-.img-categorias{
-	width: 20px;
-	height: 20px;
-}
 
 .img-redesocial{
 	height: 20px;
 	width: 20px;
 	float: bottom;
+}
+
+/*Estilo Caixa de anuncios*/
+
+#anuncios{
+  width: 100%
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#anuncios img{
+  width: 500px;
+  height: 500px;
+
 }
 
 /*Estilo da Caixa de Produtos em destaque*/

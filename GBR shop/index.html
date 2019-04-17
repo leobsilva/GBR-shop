@@ -12,7 +12,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <title>GBR SHOP</title>
-      <link rel="stylesheet" href="_css.css"><!--importando o arquivo css-->
+      <link rel="stylesheet" href="estilo.css"><!--importando o arquivo css-->
   </head>
 
   <body>
@@ -47,9 +47,9 @@
     </header>
 
     <!--Barra lateral de navegação por categorias-->
-    <div id="lista-categorias">
-      <nav>
+      <nav id="lista-categorias">
         <ul>
+          <hr>
           <li class="editaItensCategoria">
             <!--<img src="Imagens/nike.jpg" class="img-categorias">-->
             <a href="categoriaNike.html" class="Links-categorias">Nike</a></li>
@@ -75,7 +75,35 @@
           </a>
         </ul>
       </nav>
+    
+    <!--Caixa de Anuncios em Geral-->
+    <div>
+      <aside>
+        <ul id="anuncios">
+          
+          <li>
+            <input type="radio" id="slide1" name="slide" checked>
+            <label for="slide1"></label>
+            <img src="0.jpeg">
+          </li> 
+          
+          <li>
+            <input type="radio" id="slide2" name="slide">
+            <label for="slide2"></label>
+            <img src="1.jpeg">
+          </li>
+          
+          <li>
+            <input type="radio" id="slide3" name="slide">
+            <label for="slide3"></label>
+            <img src="2.jpeg">
+          </li> 
+        
+        </ul>
+      </aside>
     </div>
+
+
     <!--Caixa de Produtos em Destaque-->
     <div class="produtos-destaque">
       <section class="itens container">
@@ -163,13 +191,6 @@
           </figcaption>
         </article>
       </section>
-    </div>
-
-    <!--Caixa de Anuncios em Geral-->
-    <div id="anuncios">
-      <aside>
-        <img src="Imagens/fundo.png" id="img-anuncio">
-      </aside>
     </div>
 
     <!--Rodapé da Página-->
