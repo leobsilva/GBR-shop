@@ -8,7 +8,11 @@ nav{
   width: 100%;
   background-color: black;
   overflow: auto;
+<<<<<<< HEAD
   height: 60px;
+=======
+  height: 260 px;
+>>>>>>> e9fddf6a604fe7f36cd62eb8de14460acdb2d674
 }
 
 ul.menu-topo{
@@ -75,8 +79,17 @@ input[type=search]{
 
 .banner{
   width: 100%;
-  height: 250px;
+  height: 180px;
   background-color: black;
+  font-family: verdana;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 35px;
+  border-bottom: 1px solid white;
+
 }
 #linha{
   width: 80%;
@@ -90,6 +103,11 @@ input[type=search]{
 	color: gray;
 }
 
+.slide{
+  width: 100%;
+  height: 280px;
+  background-color: black;
+}
 
 
 
@@ -136,6 +154,7 @@ input[type=search]{
 	float: bottom;
 }
 
+<<<<<<< HEAD
 /*Estilo Caixa de anuncios*/
 
 #anuncios{
@@ -144,6 +163,11 @@ input[type=search]{
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+=======
+ul.marcas li:hover{
+  background-color: rgba(0,0,0, .1);
+  transition: .4s;
+>>>>>>> e9fddf6a604fe7f36cd62eb8de14460acdb2d674
 }
 
 #anuncios img{
@@ -195,6 +219,7 @@ figcaption{
 
 /*Estilo do Rodapé*/
 
+<<<<<<< HEAD
 #rodape{
 	width: 1280px;
 	float: left;
@@ -206,6 +231,27 @@ figcaption{
 #form-cadastro{
   width: 70%;
   background-color: black;
+=======
+footer{
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  padding-top: 20px;
+
+}
+.conteudo-container{
+  justify-content: space-between;
+
+}
+
+ul.conteudo{
+  text-align: left;
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  list-style-type: none;
+>>>>>>> e9fddf6a604fe7f36cd62eb8de14460acdb2d674
   color: white;
   position: relative;
   left: 17%;
@@ -222,6 +268,7 @@ figcaption{
   font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 #form-cadastro input[type=text]{
   border-radius: 15px;
   padding: 8px;
@@ -252,4 +299,29 @@ figcaption{
   font-family: sans-serif;
   text-align: center;
   padding-top: 5%;
+=======
+ul.redes{
+  padding-left: 15px;
+  display: flex;
+  width: 25px;
+  list-style-type: none;
+  cursor: pointer;
+  position: absolute;
+  justify-content: space-between;
+
+}
+ul.redes li{
+  justify-content: space-between;
+  padding-top: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+ul.redes li  a {
+  justify-content: space-between;
+}
+ul.redes li:hover{
+  transform: scale(1.1);
+  background-color: rgba(255,255,255,.9);
+
+>>>>>>> e9fddf6a604fe7f36cd62eb8de14460acdb2d674
 }
