@@ -8,8 +8,7 @@
   width: 100%;
   background-color: black;
   overflow: auto;
-  height: 60px;
-
+  height: 260 px;
 }
 
 ul.menu-topo{
@@ -73,8 +72,17 @@ input[type=text]{
 
 .banner{
   width: 100%;
-  height: 250px;
+  height: 180px;
   background-color: black;
+  font-family: verdana;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 35px;
+  border-bottom: 1px solid white;
+
 }
 #linha{
   width: 100px;
@@ -82,6 +90,11 @@ input[type=text]{
 
 }
 
+.slide{
+  width: 100%;
+  height: 280px;
+  background-color: black;
+}
 
 #menu-meio{
   width: 100%;
@@ -119,6 +132,7 @@ ul.marcas li a{
 
 ul.marcas li:hover{
   background-color: rgba(0,0,0, .1);
+  transition: .4s;
 }
 
 
@@ -171,9 +185,16 @@ footer{
   height: 250px;
   background-color: black;
   padding-top: 20px;
+
+}
+.conteudo-container{
+  justify-content: space-between;
+
 }
 
 ul.conteudo{
+  text-align: left;
+  width: 100%;
   padding-left: 15px;
   padding-top: 20px;
   padding-bottom: 5px;
@@ -187,15 +208,28 @@ ul.conteudo li a {
   letter-spacing: 0.9px;
   text-decoration: none;
 }
-ul.redes li{
-    list-style-type: none;
-}
-ul.redes li a{
+
+ul.redes{
+  padding-left: 15px;
   display: flex;
-  padding-top: 20px;
+  width: 25px;
+  list-style-type: none;
+  cursor: pointer;
+  position: absolute;
   justify-content: space-between;
+
+}
+ul.redes li{
+  justify-content: space-between;
+  padding-top: 2px;
+  border-radius: 5px;
   background-color: white;
 }
-.conteudo-container{
-  display: flex;
+ul.redes li  a {
+  justify-content: space-between;
+}
+ul.redes li:hover{
+  transform: scale(1.1);
+  background-color: rgba(255,255,255,.9);
+
 }
