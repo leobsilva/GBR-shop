@@ -1,0 +1,111 @@
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"><!--faz o site aceitar o padrao universao de caracteres com acentos e cedilha-->
+      <!--SEO BASICO-->
+      <meta name="author" content="Leonardo Barros e Luiz Dendena">
+      <meta name="description" content="GBR SHOP">
+      <meta name="robots" content="index, nofollow"><!--robos de busca peguem o que o usuario digitou no campo de busca, nofollow-->
+
+
+      <!--Design Responsivo-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Cadastro GBR SHOP</title>
+      <link rel="stylesheet" href="estilo.css"><!--importando o arquivo css-->
+</head>
+<body>
+
+	<!--menu-->
+    <header>
+      <nav id="header">
+
+          <div class="nav-wrapper">
+
+
+              <ul class="menu-topo">
+                  <li><a href="login.html">LOGIN</a></li>
+                  <li><a href="cadastro.html">CADASTRE-SE</a></li>
+                  <li><a href="#"><input type="image" src="icones/cart.png" class="cart" ></a></li>
+              </ul>
+
+              <form id="form-pesquisa">
+                  <input type="search" placeholder="Burcar...">
+                  <input type="image" src="icones/lupa.png" class="btn">
+              </form>
+
+          </div>
+      </nav>
+      <div id="linha">
+      </div>
+
+        <div class="banner">
+
+
+        </div>
+
+    </header>
+
+    <hr>
+
+    <section id="form-cadastro">
+
+      <p>
+        Insira seus dados e clique em confirmar
+        para fazer o cadastro!
+      </p>
+
+    	<form>
+        <ul>
+	        <li>
+            <label for="nome">Nome:</label><br>
+            <input type="text" placeholder="Nome..." id="nome" name="nome">
+          </li>
+	        <li>
+            <label for="sobrenome">Sobrenome:</label><br>
+            <input type="text" placeholder="Sobrenome..." id="sobrenome" name="Sobrenome">
+          </li>
+	        <li>
+            <label for="telefone">Telefone:</label><br>
+            <input type="text" placeholder="Telefone..." id="telefone" name="telefone">
+          </li>
+	        <li>
+            <label for="email">Email:</label><br>
+            <input type="text" placeholder="Email..." id="email" name="email">
+          </li>
+	        <li>
+            <label for="senha">Senha:</label><br>
+            <input type="passowrd" placeholder="******..." id="senha" name="senha">
+          </li>
+	        <li>
+            <label for="confirmasenha">Confirme sua senha:</label><br>
+            <input type="passowrd" placeholder="******..." id="confirmasenha" name="senha">
+          </li>
+          <li>
+            <input type="button" value="Confirmar" onclick="msg()">
+          </li>
+        </ul>
+        
+    	</form>
+
+    </section>
+
+    <!--Rodapé da Página-->
+    <footer>
+      <hr>
+      <div class="conteudo-container">
+        <ul class="conteudo">
+          <li><a href="#">Dúvidas</a></li><br>
+          <li><a href="#">Cadastre-se</a></li><br>
+          <li><a href="#">Sobre Nós</a></li><br>
+          <li><a href="#">Contato</a></li><br>
+        </ul>
+        <ul class="redes">
+          <li><a href="#"><img src="icones/instagram.png"></a></li>
+          <li><a href="#"><img src="icones/facebook.png"></a></li>
+      </div>
+
+
+    </footer>
+
+</body>
+</html>

@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 
-#header{
+nav{
   width: 100%;
   background-color: black;
   overflow: auto;
   height: 60px;
-
 }
 
 ul.menu-topo{
@@ -37,15 +36,14 @@ ul.menu-topo li a:hover{
   transition: .3s;
 }
 
-.form-pesquisa{
+#form-pesquisa{
   margin-top: 15px;
   float: left;
   margin-right: 100px;
 }
-input[type=text]{
-  width: 300px;
+
+input[type=search]{
   border-radius: 15px;
-  margin-left: 30px;
   padding: 8px;
   border: none;
   font-size: 16px;
@@ -59,6 +57,10 @@ input[type=text]{
   padding: 5.5px;
   font-family: sans-serif;
   border-radius: 20px;
+  position: relative;
+  left: 1%;
+  top: 1%;
+
 }
 .cart{
   margin: 12px;
@@ -77,50 +79,78 @@ input[type=text]{
   background-color: black;
 }
 #linha{
-  width: 100px;
+  width: 80%;
   border-bottom: .5px solid white;
+}
+
+
+
+
+#lista-categorias ul li a:hover{
+	color: gray;
+}
+
+
+
+
+#logo-marca, h4, a{
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	clear: left;
+	clear: right;
+	clear: both;
+	clear: top;
+}
+
+/*Estilo da Barra Lateral por categorias*/
+#lista-categorias{
+	width: 100%;
+  height: auto;
+	background-color: white;
+	font-size: 30px;
+	margin-right: 10px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
 
 }
 
 
-#menu-meio{
+.editaItensCategoria{
+
+	list-style-type: none;
+  display: inline;
+}
+
+.Links-categorias {
+	color: black;
+	text-decoration: none;
+}
+
+
+.img-redesocial{
+	height: 20px;
+	width: 20px;
+	float: bottom;
+}
+
+/*Estilo Caixa de anuncios*/
+
+#anuncios{
   width: 100%;
-  height:60px;
-  background-color: white;
-  border-bottom: 1px solid black;
-}
-
-.menu-marcas{
-  height: 60px;
-  margin: 0;
-  padding: 0;
-}
-
-ul.marcas{
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  line-height: 60px;
-  justify-content: space-between;
-}
-ul.marcas li{
-  cursor: pointer;
-  text-align: center;
-  flex:1;
-
-}
-ul.marcas li a{
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  font-family: sans-serif;
-  letter-spacing: 0.9px;
+  margin-top: 50px;
 }
 
-ul.marcas li:hover{
-  background-color: rgba(0,0,0, .1);
-}
+#anuncios img{
+  width: 500px;
+  height: 500px;
 
+}
 
 /*Estilo da Caixa de Produtos em destaque*/
 .container{
@@ -157,7 +187,6 @@ figcaption{
 .produtos{
 	width: 350px;
 	height: 420px;
-
 	margin: 5px 5px 5px 5px;
 	border: 3px solid #ae841a;
 }
@@ -166,36 +195,61 @@ figcaption{
 
 /*Estilo do Rodapé*/
 
-footer{
-  width: 100%;
-  height: 250px;
-  background-color: black;
-  padding-top: 20px;
+#rodape{
+	width: 1280px;
+	float: left;
+	border: 3px solid black;
 }
 
-ul.conteudo{
-  padding-left: 15px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  list-style-type: none;
+/*Estilo formulário de cadastro*/
+
+#form-cadastro{
+  width: 70%;
+  background-color: black;
   color: white;
+  position: relative;
+  left: 17%;
 }
-ul.conteudo li a {
+
+
+#form-cadastro ul li{
+  list-style: none;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 15px;
+  padding-left: 5%;
   font-size: 16px;
   font-family: sans-serif;
-  color: white;
-  letter-spacing: 0.9px;
-  text-decoration: none;
 }
-ul.redes li{
-    list-style-type: none;
+
+#form-cadastro input[type=text]{
+  border-radius: 15px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: sans-serif;
 }
-ul.redes li a{
-  display: flex;
-  padding-top: 20px;
-  justify-content: space-between;
-  background-color: white;
+
+
+#form-cadastro input[type=passowrd]{
+  border-radius: 15px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: sans-serif;
 }
-.conteudo-container{
-  display: flex;
+
+#form-cadastro input[type=button]{
+  border-radius: 15px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+#form-cadastro p{
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 5%;
 }
