@@ -168,7 +168,6 @@ ul.marcas li:hover{
 .container{
   width:70%;
   margin: auto;
-
 }
 
 .item-box{
@@ -317,4 +316,151 @@ ul.redes li:hover{
   transform: scale(1.1);
   background-color: rgba(255,255,255,.9);
 
+}
+
+/*pag do produto*/
+.carrinho{
+  width:70%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+
+}
+
+.parte-esquerda{
+  width: 65%;
+  position: relative;
+}
+.parte-esquerda imagem-produto{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px;
+}
+.parte-direita{
+  width: 35%;
+  margin-top: 60px;
+
+}
+.desc-produto span{
+  font-family: sans-serif;
+  font-size: 12px;
+  color: steelblue;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.desc-produto h1{
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.desc-produto p{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.desc-produto{
+  border-bottom: 1px solid rgba(255,255,255,.9);
+  margin-bottom: 20px;
+}
+.desc-produto hr{
+  color: #86939E;
+}
+.tamanhos span{
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.tamanhos{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.tamanhos button{
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+.tamanhos button:hover{
+  border: 2px solid #86939E;
+  outline: none;
+}
+.preço span{
+  font-family: sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+.add-carrinho{
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.add-carrinho:hover {
+  background-color: #64af3d;
+}
+
+/*carrinho*/
+@import "<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald&display=swap" rel="stylesheet"> ";
+.carrinho-produto span{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.linha-produto{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-carrinho-produto{
+  width: 33%;
+  border-right: 1px solid #86939E;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+.detalhe-produto-carrinho{
+  font-family: 'Oswald', sans-serif;
+  padding-top: 45px;
+  line-height: 30px;
+  text-align: center;
+  width: 33%;
+  border-right: 1px solid #86939E;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+.preço-produto-carrinho{
+  font-family: 'Oswald', sans-serif;
+  padding-top: 15px;
+  line-height: 30px;
+  text-align: center;
+  width: 33%;
+}
+.info-cliente{
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.info-cliente span{
+  font-size: 20px;
+  font-style: oblique;
 }
