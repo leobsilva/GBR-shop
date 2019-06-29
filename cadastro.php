@@ -25,12 +25,12 @@
           <div class="nav-wrapper">
 
               <div class="banner-logo">
-                <h1><a href="index.html">GBR Shop</a></h1>
+                <h1><a href="index.php">GBR Shop</a></h1>
               </div>
 
               <ul class="menu-topo">
-                  <li><a href="login.html">LOGIN</a></li>
-                  <li><a href="cadastro.html">CADASTRE-SE</a></li>
+                  <li><a href="login.php">LOGIN</a></li>
+                  <li><a href="cadastro.php">CADASTRE-SE</a></li>
                   <li><a href="#"><input type="image" src="icones/cart.png" class="cart" ></a></li>
               </ul>
 

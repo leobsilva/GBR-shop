@@ -25,12 +25,12 @@
           <div class="nav-wrapper">
 
               <div class="banner-logo">
-                <h1><a href="index.html">GBR Shop</a></h1>
+                <h1><a href="index.php">GBR Shop</a></h1>
               </div>
 
               <ul class="menu-topo">
-                  <li><a href="login.html">LOGIN</a></li>
-                  <li><a href="cadastro.html">CADASTRE-SE</a></li>
+                  <li><a href="login.php">LOGIN</a></li>
+                  <li><a href="cadastro.php">CADASTRE-SE</a></li>
                   <li><a href="#"><input type="image" src="icones/cart.png" class="cart" ></a></li>
               </ul>
 
@@ -75,10 +75,23 @@
         JÁ TENHO CONTA
       </p>
 
-      <form id="caixa">
+      <form id="caixa" action="" method="post">
         <ul>
 
           <li>
+            <?php
+
+              if(isset($_POST['confirmar'])){
+                include_once "classes/VerificaLogin.php";
+                $login = $_POST['email'];
+                $senha = $_POST['senha'];
+                $check = new VerificaLogin($login, $senha);
+                //$check->checkAdmin();
+                if(empty($login)) echo "Informe seu email, por favor!";
+                  if(empty($senha)) echo "Informe sua senha, por favor!";
+                else $check->verificaUser($login, $senha);
+              }
+            ?>
             <label for="email">Email:</label><br>
             <input type="text" placeholder="Email..." id="email" name="email">
           </li>
@@ -87,7 +100,7 @@
             <input type="passowrd" placeholder="******..." id="senha" name="senha">
           </li>
           <li>
-            <button type="submit" value="Login" onclick="msg()">
+            <button type="submit" value="Login" onclick="msg()" name="confirmar">
           </li>
 
         </ul>

@@ -27,11 +27,11 @@ session_start();
           <div class="nav-wrapper">
 
               <div class="banner-logo">
-                <h1><a href="index.html">GBR Shop</a></h1>
+                <h1><a href="index.php">GBR Shop</a></h1>
               </div>
 
               <ul class="menu-topo">
-                  <li><?php echp "Bem-Vindo". $_SESSION['nome'] ?></li>
+                  <li>=<? echo "Bem-Vindo".$_SESSION['nome'] ?></li>
                   <li><input type="image" src="icones/cart.png" alt="cart" class="cart" ></li>
               </ul>
 

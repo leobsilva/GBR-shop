@@ -1,1 +1,1 @@
-# GBR-shop
+# GBR-SHOP

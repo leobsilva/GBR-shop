@@ -5,7 +5,7 @@
 
 		public function __construct(){
 			$this->login = "admin";
-			$this->senha = "ahsgat6327";
+			$this->senha = "usgh*162Tjsi";
 		} 
 
 		public function verifica($l, $s){
