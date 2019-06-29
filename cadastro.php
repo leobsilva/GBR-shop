@@ -70,7 +70,7 @@
 <!--formulario cadastro-->
     <section id="form-cadastro">
       <?php
-        
+
         $countErro = 0;
 
         if(isset($_POST['Confirmar'])){
@@ -83,7 +83,7 @@
           if(empty($nome)){
             $countErro ++;
             echo "Campo nome não preenchido <br>";
-          }  
+          }
           if(empty($sobrenome)){
             $countErro ++;
             echo "Campo sobrenome não preenchido <br>";
@@ -106,12 +106,12 @@
           if($countErro == 0){
             $nomeCompleto = "$sobrenome.$nome" ;
             if($senha === $checkSenha){
-             $sql = "insert into clientes (nome_cliente, fone, email, senha) values 
+             $sql = "insert into clientes (nome_cliente, fone, email, senha) values
                   ('$nomeCompleto', '$fone', '$email', '$senha');";
               include_once "conexaoPHP/conexao.php";
               if(mysqli_query($conexao, $sql)){
-                echo "Cadastro realizado com sucesso" ;
-              } 
+                header('Location:index-logado.php');;
+              }
             }
           }
           else{
