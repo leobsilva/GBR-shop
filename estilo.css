@@ -32,10 +32,10 @@ ul.menu-topo li{
 ul.menu-topo li a{
   color: white;
   text-decoration: none;
-  width: 130px;
+  width: 80px;
   display: block;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   font-family: sans-serif;
   letter-spacing: 0.9px;
 }

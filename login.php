@@ -82,11 +82,11 @@
             <?php
 
               if(isset($_POST['confirmar'])){
-                include_once "classes/VerificaLogin.php";
+                include_once "VerificaLogin.php";
                 $login = $_POST['email'];
                 $senha = $_POST['senha'];
                 $check = new VerificaLogin($login, $senha);
-                //$check->checkAdmin();
+                $check->checkAdmin();
                 if(empty($login)) echo "Informe seu email, por favor!";
                   if(empty($senha)) echo "Informe sua senha, por favor!";
                 else $check->verificaUser($login, $senha);

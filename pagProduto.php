@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -29,11 +32,22 @@
                 <h1><a href="index.php">GBR Shop</a></h1>
               </div>
 
-              <ul class="menu-topo">
-                  <li><a href="login.php">LOGIN</a></li>
-                  <li><a href="cadastro.php">CADASTRE-SE</a></li>
+              <?
+              if(isset($_SESSION['usuario'])){
+              ?>
+                <ul class="menu-topo">
+                  <li><a><? echo $_SESSION['usuario'] ?></a></li>
                   <li><input type="image" src="icones/cart.png" alt="cart" class="cart" ></li>
-              </ul>
+                </ul>
+              <?
+              }else {
+              ?>
+                <ul class="menu-topo">
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="cadastro.php">CADASTRE-SE</a></li>
+                    <li><a href="#"><input type="image" src="icones/cart.png" alt="" class="cart" ></a></li>
+                </ul>
+              <?}?>
 
               <form class="form-pesquisa">
                   <input id="text" type="text" placeholder="Burcar...">
@@ -97,19 +111,6 @@
       <div class="tamanhos">
         <span>Tamanhos</span><br>
         <form action="" method="post">
-          
-          <?php
-            $sql = "insert into tamanho (numero, id_produto) values ('$number', '$id')";
-            $resultado = mysqli_query($conexao, $sql);
-            if(isset($_POST['b1'])) $number = $_POST['b1'];
-            if(isset($_POST['b2'])) $number = $_POST['b2'];
-            if(isset($_POST['b3'])) $number = $_POST['b3'];
-            if(isset($_POST['b4'])) $number = $_POST['b4'];
-            if(isset($_POST['b5'])) $number = $_POST['b5'];
-            if(isset($_POST['b6'])) $number = $_POST['b6'];
-            if(isset($_POST['b7'])) $number = $_POST['b7'];
-
-          ?>
 
           <button name="b1">38</button>
           <button name="b2">39</button>
@@ -125,7 +126,7 @@
 
       <div class="preço">
         <span>=<?echo $resultado[1]?></span>
-      <a href="carrinho.html" class="add-carrinho">Comprar</a>
+      <a href="carrinho.php" class="add-carrinho">Comprar</a>
 
       </div>
 

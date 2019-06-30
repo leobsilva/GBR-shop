@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -25,14 +28,24 @@
           <div class="nav-wrapper">
 
               <div class="banner-logo">
-                <h1><a href="index.html">GBR Shop</a></h1>
+                <h1><a href="index.php">GBR Shop</a></h1>
               </div>
-
-              <ul class="menu-topo">
-                  <li><a href="login.html">LOGIN</a></li>
-                  <li><a href="cadastro.html">CADASTRE-SE</a></li>
-                  <li><a href="#"><input type="image" src="icones/cart.png" alt="" class="cart" ></a></li>
-              </ul>
+              <?
+              if(isset($_SESSION['usuario'])){
+              ?>
+                <ul class="menu-topo">
+                  <li><a><? echo $_SESSION['usuario'] ?></a></li>
+                  <li><input type="image" src="icones/cart.png" alt="cart" class="cart" ></li>
+                </ul>
+              <?
+              }else {
+              ?>
+                <ul class="menu-topo">
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="cadastro.php">CADASTRE-SE</a></li>
+                    <li><a href="#"><input type="image" src="icones/cart.png" alt="" class="cart" ></a></li>
+                </ul>
+              <?}?>
 
               <form class="form-pesquisa">
                   <input id="text" type="text" placeholder="Burcar...">
@@ -74,9 +87,9 @@
 
     <div class="produtos-destaque container">
 
-      <div id="0014" class="item-box">
+      <div id="1" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd-Cinza-9247-3173664-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd-Cinza-9247-3173664-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -87,9 +100,9 @@
 
       </div>
 
-      <div id="0015" class="item-box">
+      <div id="2" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd-Preto-9268-7273664-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd-Preto-9268-7273664-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -100,9 +113,9 @@
 
       </div>
 
-      <div id="0016" class="item-box">
+      <div id="3" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd_R1-Stlt-Parley-Pk-Preto-7962-3268544-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/adidas/adidas-Originals-Tênis-adidas-Originals-Nmd_R1-Stlt-Parley-Pk-Preto-7962-3268544-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -113,9 +126,9 @@
 
       </div>
 
-      <div id="0017" class="item-box">
+      <div id="4" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/adidas/adidas-Tênis-adidas-Nmd_Ts1-Pk-Preto-7640-4727044-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/adidas/adidas-Tênis-adidas-Nmd_Ts1-Pk-Preto-7640-4727044-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -126,9 +139,9 @@
 
       </div>
 
-      <div id="0018" class="item-box">
+      <div id="5" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/adidas/adidas-Tênis-adidas-Nmd_Ts1-Pk-Verde-7649-5627044-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/adidas/adidas-Tênis-adidas-Nmd_Ts1-Pk-Verde-7649-5627044-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -144,9 +157,9 @@
     <h2>Nike</h2><hr>
     <div class="produtos-destaque container">
 
-      <div id="0009" class="item-box">
+      <div id="6" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/nike/Branco-7725-7791054-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/nike/Branco-7725-7791054-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -157,9 +170,9 @@
 
       </div>
 
-      <div id="0010" class="item-box">
+      <div id="7" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Axix-Se-Marrom-7209-1426224-1-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Axix-Se-Marrom-7209-1426224-1-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -170,9 +183,9 @@
 
       </div>
 
-      <div id="0011" class="item-box">
+      <div id="8" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/nike/Nike-Tênis-Nike-Air-Max-Sequent-4-Azul-0602-2623054-1-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/nike/Nike-Tênis-Nike-Air-Max-Sequent-4-Azul-0602-2623054-1-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -183,9 +196,9 @@
 
       </div>
 
-      <div id="0012" class="item-box">
+      <div id="9" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Nostalgic-Bege-0316-6384604-1-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Nostalgic-Bege-0316-6384604-1-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -196,9 +209,9 @@
 
       </div>
 
-      <div id="0013" class="item-box">
+      <div id="10" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Sequent-4-Utility-Cinza-9711-3041054-1-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/nike/Nike-Sportswear-Tênis-Nike-Sportswear-Air-Max-Sequent-4-Utility-Cinza-9711-3041054-1-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -213,9 +226,9 @@
 
     <h2>Vans</h2><hr>
     <div class="produtos-destaque container">
-      <div id="0001" class="item-box">
+      <div id="11" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/vans/tenis_vans_era_preto_masculino_2_.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/vans/tenis_vans_era_preto_masculino_2_.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -226,9 +239,9 @@
 
       </div>
 
-      <div id="0002" class="item-box">
+      <div id="12" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/vans/Vans-Slip-On-Vans-Asher-Rock-Cinza-3354-8026163-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/vans/Vans-Slip-On-Vans-Asher-Rock-Cinza-3354-8026163-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -239,9 +252,9 @@
 
       </div>
 
-      <div id="0003" class="item-box">
+      <div id="13" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/vans/Vans-Tênis-Vans-Filmore-Decon-Preto-7715-7523054-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/vans/Vans-Tênis-Vans-Filmore-Decon-Preto-7715-7523054-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -252,9 +265,9 @@
 
       </div>
 
-      <div id="0004" class="item-box">
+      <div id="14" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/vans/Vans-Tênis-Vans-Mn-Ward-Preto-2136-4408154-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/vans/Vans-Tênis-Vans-Mn-Ward-Preto-2136-4408154-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 
@@ -265,9 +278,9 @@
 
       </div>
 
-      <div id="0005" class="item-box">
+      <div id="15" class="item-box">
         <div class="item-img">
-          <a href="#"><img src="tenis/vans/Vans-Tênis-Vans-Wm-Maddie-Hi-Preto-9602-1225204-3-zoom.jpg" alt="" class="imagem-item"></a>
+          <a href="pagProduto.php"><img src="tenis/vans/Vans-Tênis-Vans-Wm-Maddie-Hi-Preto-9602-1225204-3-zoom.jpg" alt="" class="imagem-item"></a>
 
         </div>
 

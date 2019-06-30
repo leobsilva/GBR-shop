@@ -2,20 +2,21 @@
 	class VerificaLogin{
 	
 	public function __construct($login, $senha){
-		include "classes/Admin.php";
+		include "Admin.php";
 		$user = new Admin();
 		$msg = $user->verifica($login, $senha);
 	}
 
-	public function checkAdmim(){
+	public function checkAdmin(){
 		if($msg == "ok"){
 			session_start();
 			$_SESSION['usuario'] = $_POST['login'];
 			$_SESSION['inicio'] = date("d/m/Y H:i");
-			//header("Location: admEventos.php");
+			header("Location: index-logado.php");
 		}
 		else{
-			//header("Location: login.php?erro=$msg");
+			header("Location: login.php");
+			echo "Você errou, tente novamente!";
 		} 
 	}
 	public function verificaUser($login, $senha){
@@ -26,9 +27,10 @@
 			session_start();
 			$_SESSION['usuario'] = $login;
 			$_SESSION['inicio'] = date("d/m/Y H:i");
-			//header("Location: admEventos.php");
+			header("Location: index-logado.php");
 		}
 		else{
+			header("Location: login.php");
 			echo "Você errou, tente novamente!";
 		}
 	}

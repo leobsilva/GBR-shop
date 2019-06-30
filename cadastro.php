@@ -110,7 +110,12 @@
                   ('$nomeCompleto', '$fone', '$email', '$senha');";
               include_once "conexaoPHP/conexao.php";
               if(mysqli_query($conexao, $sql)){
-                header('Location:index-logado.php');;
+                session_start();
+                $sql = "select email, senha from cliente where email = '$email' and senha = '$senha'";
+                $resultado = mysqli_query($conexao, $sql);
+                $_SESSION['usuario'] = $login;
+                $_SESSION['inicio'] = date("d/m/Y H:i");
+                header("Location: index-logado.php");
               }
             }
           }

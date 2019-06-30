@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,9 +17,6 @@
       <title id="title">GBR SHOP</title>
       <link rel="stylesheet" href="estilo.css"><!--importando o arquivo css-->
       <script src="mascara_login.ls"></script>
-
-<?php session_start();
- ?>
   </head>
 
   <body>
@@ -30,11 +30,22 @@
                 <h1><a href="index.html">GBR Shop</a></h1>
               </div>
 
-              <ul class="menu-topo">
-                  <li><a href="login.html">LOGIN</a></li>
-                  <li><a href="cadastro.html">CADASTRE-SE</a></li>
+              <?
+              if(isset($_SESSION['usuario'])){
+              ?>
+                <ul class="menu-topo">
+                  <li><a><? echo $_SESSION['usuario'] ?></a></li>
                   <li><input type="image" src="icones/cart.png" alt="cart" class="cart" ></li>
-              </ul>
+                </ul>
+              <?
+              }else {
+              ?>
+                <ul class="menu-topo">
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="cadastro.php">CADASTRE-SE</a></li>
+                    <li><a href="#"><input type="image" src="icones/cart.png" alt="" class="cart" ></a></li>
+                </ul>
+              <?}?>
 
               <form class="form-pesquisa">
                   <input id="text" type="text" placeholder="Burcar...">
@@ -77,88 +88,7 @@
 <!--formulario cadastro deprodutos-->
 <form class="form-cadastroProduto container" action="" method="post">
 
-  <?php
-  if(isset($_POST['cadastrar'])){
-    $nomeProduto = $_POST['nomeProduto'];
-    $tipoProduto = $_POST['tipoProduto'];
-    $preco = $_POST['preProduto'];
-    $trintaecinco = $_POST['35'];
-    $trintaeseis = $_POST['36'];
-    $trintaesete = $_POST['37'];
-    $trintaeoito = $_POST['38'];
-    $trintaenove = $_POST['39'];
-    $quarenta = $_POST['40'];
-    $quarentaeum = $_POST['41'];
-    $quarentaedois = $_POST['42'];
-    $quarentaetres = $_POST['43'];
-    $quarentaequato = $_POST['44'];
-    $imgProduto = $_POST['imgProduto'];
-  }
-
-
-  include_once "conexao.php";
-
-  $sql_produtos = "insert into produtos
-          (nome_produto, preco, marca, imagem) values
-          ('$nomeProduto', '$preco', $tipoProduto, '$imgProduto')";
-  if(mysqli_query($conexao, $sql_produtos)) echo "Produto cadastrado com sucesso!";
-
-  $sql_id = "select id_produto from produtos where nome_produto = '$nomeProduto' ";
-  $resultado = mysqli_query($conexao, $sql_id);
-
-
-  if(isset($trintaecinco)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaecinco)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($trintaeseis)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaeseis)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($trintaesete)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaesete)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($trintaeoito)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaeoito)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($trintaenove)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaenove)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($quarenta)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarenta)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($quarentaeum)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaeum)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($quarentaedois)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaedois)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($quarentaetres)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaetres)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-  if(isset($quarentaequato)){
-    $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaequato)";
-    if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
-  }
-
-
-
-  if(mysqli_query($conexao, $sql_produtos)){
-    echo "Cadastrado com sucesso";
-  }
-  else{
-    echo "Ocorreu um erro, verifique se esta preenchido corretamente";
-    echo mysqli_error($conexao);
-  }
-
-   ?>
+  
 
 <div class= "form-cadastroProduto container">
 
@@ -207,11 +137,98 @@
 
 
 
+
 <form action="upload.php" method="post" enctype="multipart/form-data">
       <label>Insira uma imagem:</label><br>
         <input type="file" name="imgProduto" id="imgProduto"><br><br>
 
-        <input type="submit" value="Upload Produto" name="submitProduto"><br><br>
+        <input type="submit" name="cadastrar"><br><br>
+
+<?php
+  if(isset($_POST['cadastrar'])){
+    $nomeProd = $_POST['nomeProduto'];
+    $tipoProd = $_POST['tipoProduto'];
+    $preco = $_POST['preProduto'];
+    $trintaecinco = $_POST['35'];
+    $trintaeseis = $_POST['36'];
+    $trintaesete = $_POST['37'];
+    $trintaeoito = $_POST['38'];
+    $trintaenove = $_POST['39'];
+    $quarenta = $_POST['40'];
+    $quarentaeum = $_POST['41'];
+    $quarentaedois = $_POST['42'];
+    $quarentaetres = $_POST['43'];
+    $quarentaequato = $_POST['44'];
+    $imgProd = $_POST['imgProduto'];
+
+    include_once "conexaoPHP/conexao.php";
+
+    $sql_produtos = "insert into produtos
+            (nome_produto, preco, marca, imagem) values
+            ('$nomeProd', '$preco', '$tipoProd', '$imgProd')";
+    if(mysqli_query($conexao, $sql_produtos)) echo "Produto cadastrado com sucesso!";
+
+    $sql_id = "select id_produto from produtos where nome_produto = '$nomeProd' ";
+    $resultado = mysqli_query($conexao, $sql_id);
+
+
+    if(isset($trintaecinco)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaecinco)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    else true;
+    if(isset($trintaeseis)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaeseis)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    else true;
+    if(isset($trintaesete)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaesete)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    if(isset($trintaeoito)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaeoito)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    if(isset($trintaenove)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $trintaenove)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    if(isset($quarenta)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarenta)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    else true;
+    if(isset($quarentaeum)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaeum)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    if(isset($quarentaedois)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaedois)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    else true;
+    if(isset($quarentaetres)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaetres)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+    if(isset($quarentaequato)){
+      $sql_tamanhos = "insert into tamanho (id_produto, numero) values ('$conexao', $quarentaequato)";
+      if(mysqli_query($conexao, $sql_tamanhos)) echo "Tamanho inserido com sucesso!";
+    }
+
+
+
+    if(mysqli_query($conexao, $sql_produtos)){
+      echo "Cadastrado com sucesso";
+    }
+    else{
+      echo "Ocorreu um erro, verifique se esta preenchido corretamente";
+      echo mysqli_error($conexao);
+    }
+  }
+?>
+
       </form>
 </form>
 
