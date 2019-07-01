@@ -28,7 +28,7 @@ session_start();
           <div class="nav-wrapper">
 
               <div class="banner-logo">
-                <h1><a href="index.php">GBR Shop</a></h1>
+                  <img src="logo.jpg" alt="">
               </div>
               <?
               if(isset($_SESSION['usuario'])){
@@ -304,6 +304,15 @@ session_start();
           <li><a href="#">Cadastre-se</a></li><br>
           <li><a href="#">Sobre Nós</a></li><br>
           <li><a href="#">Contato</a></li><br>
+          <?
+          if(isset($_SESSION['usuario'])){
+          ?>
+          <li><a href="sair.php">Sair</a></li>
+          <?
+          else{
+            
+          }
+            ?>
         </ul>
         <ul class="redes">
           <li><a href="#"><img src="icones/instagram.png" alt=""></a></li>
